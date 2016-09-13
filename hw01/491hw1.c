@@ -77,6 +77,7 @@ int main(){
     //
     compare();
 
+    return 0;
 }
 
 double rtclock() {
