@@ -1,5 +1,5 @@
 Loop Permutation Results,,,,,,,,,
-Order,1 Old,1 New,2 Old,2 New,3 Old,3 New,Average MegaFlops Original,Average MegaFlops New,Ranking
+Order,MegaFlops from run 1 Original,MegaFlops from run 1 Improved,MegaFlops from run 2 Original,MegaFlops from run 2 Improved,MegaFlops from run 3 Original,MegaFlops from run 3 Improved,Average MegaFlops Original,Average MegaFlops New,Ranking
 ijkl,94.1,94.1,94.1,94.1,94.1,94.1,94.1,94.1,23
 ijlk,94.1,99,94,98.9,94,98.8,94.03333333,98.9,22
 ikjl,94,102.9,94,103,94,102.9,94,102.9333333,20
@@ -25,3 +25,6 @@ ljki,94.1,396.5,94,396,94,395.8,94.03333333,396.1,9
 lkij,94,511,94.1,513,93.9,512.6,94,512.2,1
 lkji,94,429.8,93.9,429.6,93.9,429,93.93333333,429.4666667,7
 Total:,,,,,,,94.08333333,,
+,,,,,,,,,
+Loop Unrolling Results,,,,,,,,,
+Number Unrolled,MegaFlops from run 1 Original,MegaFlops from run 1 Improved,MegaFlops from run 2 Original,MegaFlops from run 2 Improved,MegaFlops from run 3 Original,MegaFlops from run 3 Improved,Average MegaFlops Original,Average MegaFlops New,
