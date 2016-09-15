@@ -1,17 +1,29 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <sys/time.h>
+#include <stdlib.h> /* for atoi() */
 #define N (128)
 #define threshold (0.000000001)
 double A[N][N][N], B[N][N][N], C[N][N], CC[N][N];
 
-int main(){
+int main(int argc, char *argv[]){
 
     double rtclock();
     void compare();
     double clkbegin, clkend;
     double t;
     int i,j,k,l;
+    int IT,JT,KT,LT;
+    int it,jt,kt,lt;
+
+    if (argc != 5)
+        exit(1);
+    IT = atoi(argv[1]);
+    JT = atoi(argv[2]);
+    KT = atoi(argv[3]);
+    LT = atoi(argv[4]);
+
+    printf("IT=%d, JT=%d, KT=%d, LT=%d\n", IT, JT, KT, LT);
 
     printf("Tensor Size = %d\n",N);
     for(i=0;i<N;i++)
@@ -60,10 +72,14 @@ int main(){
     //Test version of code; initially just contains a copy of base code
     //To be modified by you to improve performance
     //
-    for (i=0; i<N; i++)
-        for (j=0; j<N; j++)
-            for (k=0; k<N; k++)
-                for (l=0; l<N; l++)
+    for (it=0; it<N; it+=IT)
+        for (jt=0; jt<N; jt+=JT)
+            for (kt=0; kt<N; kt+=KT)
+                for (lt=0; lt<N; lt+=LT)
+                    for (i=it; i<it+IT; i++)
+                        for (j=jt; j<jt+JT; j++)
+                            for (k=kt; k<kt+KT; k++)
+                                for (l=lt; l<lt+LT; l++)
                     CC[i][j] += A[l][i][k]*B[k][l][j];
     clkend = rtclock();
 
