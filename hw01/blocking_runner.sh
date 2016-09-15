@@ -18,20 +18,23 @@ KT=1
 LT=1
 NT=128
 
-while [ $IT -lt $NT ];
+while [ $IT -lt $NT ]
 do
-	while [ $JT -lt $NT ];
+	while [ $JT -lt $NT ]
 	do
-		while [ $KT -lt $NT ];
+		while [ $KT -lt $NT ]
 		do
-			while [ $LT -lt $NT ];
+			while [ $LT -lt $NT ]
 			do
 				run $IT $JT $KT $LT
 				LT=$((LT*2))
 			done
+			LT=1
 			KT=$((KT*2))
 		done
+		KT=1
 		JT=$((JT*2))
 	done
+	JT=1
 	IT=$((IT*2))
 done
