@@ -16,7 +16,7 @@ IT=1
 JT=1
 KT=1
 LT=1
-NT=128
+NT=64
 
 while [ $IT -lt $NT ]
 do

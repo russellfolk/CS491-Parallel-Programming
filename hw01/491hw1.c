@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <sys/time.h>
 #include <stdlib.h> /* for atoi() */
-#define N (128)
+#define N (64)
 #define threshold (0.000000001)
 double A[N][N][N], B[N][N][N], C[N][N], CC[N][N];
 
