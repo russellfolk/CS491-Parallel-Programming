@@ -8,15 +8,16 @@ run ()
 {
 	for i in `seq 1 3`;
 	do
-		./hw01ryfcs491 $1 $2 $3 $4 >> blocking_results.txt
+		./hw01ryfcs491_t $1 $2 $3 $4 >> blocking_results.txt
 	done
+	echo "" >> blocking_results.txt
 }
 
 IT=1
 JT=1
 KT=1
 LT=1
-NT=64
+NT=128
 
 while [ $IT -lt $NT ]
 do
