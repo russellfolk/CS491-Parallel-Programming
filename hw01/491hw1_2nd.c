@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <sys/time.h>
 #include <stdlib.h> /* for atoi() */
-#define N (128)
-#define T (4)
+#define N (256)
+#define T (16)
 #define threshold (0.000000001)
 double A[N][N][N], B[N][N][N], C[N][N], CC[N][N];
 
@@ -72,12 +72,24 @@ int main(int argc, char *argv[]){
                     for (l=lt; l<lt+T; l++)
                         for (k=kt; k<kt+T; k++)
                             for (i=it; i<it+T; i++)
-                                for (j=jt; j<jt+T; j+=4)
+                                for (j=jt; j<jt+T; j+=16)
                                 {
                                     CC[i][j] += A[l][i][k]*B[k][l][j];
                                     CC[i][j+1] += A[l][i][k]*B[k][l][j+1];
                                     CC[i][j+2] += A[l][i][k]*B[k][l][j+2];
                                     CC[i][j+3] += A[l][i][k]*B[k][l][j+3];
+                                    CC[i][j+4] += A[l][i][k]*B[k][l][j+4];
+                                    CC[i][j+5] += A[l][i][k]*B[k][l][j+5];
+                                    CC[i][j+6] += A[l][i][k]*B[k][l][j+6];
+                                    CC[i][j+7] += A[l][i][k]*B[k][l][j+7];
+                                    CC[i][j+8] += A[l][i][k]*B[k][l][j+8];
+                                    CC[i][j+9] += A[l][i][k]*B[k][l][j+9];
+                                    CC[i][j+10] += A[l][i][k]*B[k][l][j+10];
+                                    CC[i][j+11] += A[l][i][k]*B[k][l][j+11];
+                                    CC[i][j+12] += A[l][i][k]*B[k][l][j+12];
+                                    CC[i][j+13] += A[l][i][k]*B[k][l][j+13];
+                                    CC[i][j+14] += A[l][i][k]*B[k][l][j+14];
+                                    CC[i][j+15] += A[l][i][k]*B[k][l][j+15];
                                 }
     clkend = rtclock();
 
