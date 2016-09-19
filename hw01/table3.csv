@@ -1,0 +1,8 @@
+Number Unrolled,MegaFlops from run 1 Original,MegaFlops from run 1 Improved,MegaFlops from run 2 Original,MegaFlops from run 2 Improved,MegaFlops from run 3 Original,MegaFlops from run 3 Improved,Average MegaFlops Original,Average MegaFlops New,Ranking,Improvement (%)
+T=1,94.1,48.6,94,48.5,94.1,48.6,94.06666667,48.56666667,7,-48.37%
+T=2,94.2,120.9,94.2,121,93.9,120.9,94.1,120.9333333,6,28.52%
+T=4,94.1,311,94.1,311.9,94.1,311.3,94.1,311.4,4,230.92%
+T=8,94,398.4,94,398.7,94,398,94,398.3666667,1,323.79%
+T=16,94,350.9,93.9,350.8,94,351,93.96666667,350.9,3,273.43%
+T=32,93.9,357.9,94,357.5,94,358,93.96666667,357.8,2,280.77%
+T=64,94.1,148.7,93.9,164.8,94.1,151.5,94.03333333,155,5,64.84%
